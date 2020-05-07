@@ -7,42 +7,46 @@ import AddTransactions from "./components/AddTransactions";
 import IncomeList from "./components/IncomeList";
 import ExpenseList from "./components/ExpenseList";
 
+import { GlobalContextProvider } from "./context/GlobalState";
+
 import "./App.css";
 
 const App = () => {
   return (
-    <div className="container-fluid h-100 p-0 m-0 d-flex flex-column justify-content-between">
-      <Header />
+    <GlobalContextProvider>
+      <div className="container-fluid h-100 p-0 m-0 d-flex flex-column justify-content-between">
+        <Header />
 
-      <div className="mx-lg-5 mx-sm-3 overflow-hidden" id="global">
-        <div className="container-fluid p-0 m-0">
-          <div className="row px-0 p-0 m-0 align-items-center">
-            <div className="col-md-4 p-0 m-0 bg-danger align-self-stretch d-flex align-items-center">
-              <Balance />
+        <div className="mx-lg-5 mx-sm-3 overflow-hidden" id="global">
+          <div className="container-fluid p-0 m-0">
+            <div className="row px-0 p-0 m-0 align-items-center">
+              <div className="col-md-4 p-0 m-0 bg-danger align-self-stretch d-flex align-items-center">
+                <Balance />
+              </div>
+
+              <div className="col-md-8 p-0 m-0 bg-light">
+                <AddTransactions />
+              </div>
             </div>
-
-            <div className="col-md-8 p-0 m-0 bg-light">
-              <AddTransactions />
+          </div>
+          <h4 className="px-0 py-2 m-0 text-center bg-dark text-white">
+            Transaction History
+          </h4>
+          <div className="container-fluid p-0 m-0">
+            <div className="row p-0 m-0">
+              <div className="col p-0 m-0">
+                <IncomeList />
+              </div>
+              <div className="col p-0 m-0">
+                <ExpenseList />
+              </div>
             </div>
           </div>
         </div>
-        <h4 className="px-0 py-2 m-0 text-center bg-dark text-white">
-          Transaction History
-        </h4>
-        <div className="container-fluid p-0 m-0">
-          <div className="row p-0 m-0">
-            <div className="col p-0 m-0">
-              <IncomeList />
-            </div>
-            <div className="col p-0 m-0">
-              <ExpenseList />
-            </div>
-          </div>
-        </div>
+
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </GlobalContextProvider>
   );
 };
 

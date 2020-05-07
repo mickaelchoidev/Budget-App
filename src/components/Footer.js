@@ -8,7 +8,7 @@ import { FaGooglePlusSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <IconContext.Provider value={{ color: "white", size: "1.5rem" }}>
+    <IconContext.Provider value={{ color: "white", size: "30px" }}>
       <div
         className="container-fluid px-0 p-0 m-0 d-flex flex-column align-items-center bg-dark text-light"
         id="footer"
