@@ -11,7 +11,7 @@ const ExpenseTransaction = (props) => {
           {expenseTransaction.expenseName}
         </div>
         <div className="col-5 px-1 py-0 pt-0 m-0 text-right">
-          + {expenseTransaction.expenseAmount} €
+          - {expenseTransaction.expenseAmount} €
         </div>
         <div className="col-2 px-1 py-0 pt-0 m-0 text-right align-middle">
           <button type="button" className="btn btn-sm m-0 p-0">
