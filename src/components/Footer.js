@@ -14,32 +14,51 @@ const Footer = () => {
         id="footer"
       >
         <div className="text-center mt-2">
-          <a href="#" className="btn-floating p-1 mx-3 mx-sm-5">
+          <a
+            href="https://facebook.com/mickael.choi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-floating p-1 mx-3 mx-sm-5"
+          >
             <FaFacebookSquare />
           </a>
 
-          <a href="#" className="btn-floating p-1 mx-3 mx-sm-5">
+          <a
+            href="https://linkedin.com/in/mickaelchoi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-floating p-1 mx-3 mx-sm-5"
+          >
             <FaLinkedin />
           </a>
 
-          <a href="#" className="btn-floating p-1 mx-3 mx-sm-5">
+          <a
+            href="https://github.com/mickaelchoidev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-floating p-1 mx-3 mx-sm-5"
+          >
             <FaGithubSquare />
           </a>
 
-          <a href="#" className="btn-floating p-1 mx-3 mx-sm-5">
+          <a
+            href="mailto:mickaelchoidev@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-floating p-1 mx-3 mx-sm-5"
+          >
             <FaGooglePlusSquare />
           </a>
         </div>
-
-        <div className="w-50 row p-0 mx-0 my-2 justify-content-center">
-          <h5 className="col-sm-7 text-center text-md-left p-0 m-0">
+        <div className="w-75 row px-0 px-md-5 mx-0 my-2 justify-content-center align-items-center">
+          <h5 className="col-md text-center text-md-left p-0 m-0">
             Budget App
-            <span className="font-italic mx-2">
+            <span className="font-italic mx-2 text-primary">
               <small>designed by</small>
             </span>
             Mickael Choi
           </h5>
-          <h5 className="col-sm-5 text-center text-md-right p-0 m-0">
+          <h5 className="col-md-4 text-center text-md-right p-0 mx-0 my-1">
             © 2020 Copyright
           </h5>
         </div>
