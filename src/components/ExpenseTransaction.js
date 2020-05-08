@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { GlobalContext } from "../context/GlobalState";
 
 import { MdDelete } from "react-icons/md";
 
 const ExpenseTransaction = (props) => {
+  const { deleteTransaction } = useContext(GlobalContext);
+
   const expenseTransaction = props.expenseTransaction;
   return (
     <li className="container-fluid p-0 m-0">
@@ -14,7 +18,11 @@ const ExpenseTransaction = (props) => {
           - {expenseTransaction.expenseAmount} €
         </div>
         <div className="col-2 px-1 py-0 pt-0 m-0 text-right align-middle">
-          <button type="button" className="btn btn-sm m-0 p-0">
+          <button
+            type="button"
+            className="btn btn-sm m-0 p-0"
+            onClick={() => deleteTransaction(props.expenseTransaction.id)}
+          >
             <MdDelete />
           </button>
         </div>
