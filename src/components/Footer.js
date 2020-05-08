@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <IconContext.Provider value={{ color: "white", size: "30px" }}>
       <div
-        className="container-fluid px-0 p-0 m-0 d-flex flex-column align-items-center bg-dark text-light"
+        className="container-fluid px-0 p-0 m-0 d-flex flex-column align-items-center text-light"
         id="footer"
       >
         <div className="text-center mt-2">
@@ -53,7 +53,7 @@ const Footer = () => {
         <div className="w-75 row px-0 px-md-5 mx-0 my-2 justify-content-center align-items-center">
           <h5 className="col-md text-center text-md-left p-0 m-0">
             Budget App
-            <span className="font-italic mx-2 text-primary">
+            <span className="font-italic mx-2" id="spanFooter">
               <small>designed by</small>
             </span>
             Mickael Choi

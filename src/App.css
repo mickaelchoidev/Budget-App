@@ -38,6 +38,7 @@ a {
   -webkit-box-shadow: 0px -8px 18px 7px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0px -8px 18px 7px rgba(0, 0, 0, 0.8);
   box-shadow: 0px -8px 18px 7px rgba(0, 0, 0, 0.8);
+  background-color: #2f3945;
 }
 
 #global {
@@ -47,11 +48,28 @@ a {
   box-shadow: 0px 2px 18px 0px rgba(0, 0, 0, 0.8);
 }
 
+#balance {
+  background-color: #83909d;
+}
+
+#addTransaction {
+  background-color: #4d5a66;
+}
+
+#buttonAdd {
+  background-color: #947c7c;
+}
+
 #footer {
   border-radius: 10px 10px 0 0;
   -webkit-box-shadow: 0px 8px 18px 7px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0px 8px 18px 7px rgba(0, 0, 0, 0.8);
   box-shadow: 0px 8px 18px 7px rgba(0, 0, 0, 0.8);
+  background-color: #182027;
+}
+
+#spanFooter {
+  color: #83909d;
 }
 
 .btn {

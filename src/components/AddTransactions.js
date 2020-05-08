@@ -21,20 +21,20 @@ const AddTransactions = () => {
   const onSubmitIncome = (e) => {
     e.preventDefault();
 
-    const newIncomeTransaction = {
-      id: uuidv4(),
-      incomeName,
-      incomeAmount: incomeAmount * 1,
-    };
+    if (incomeName !== "") {
+      const newIncomeTransaction = {
+        id: uuidv4(),
+        incomeName,
+        incomeAmount: incomeAmount * 1,
+      };
 
-    console.log(newIncomeTransaction);
+      addIncome(newIncomeTransaction);
 
-    addIncome(newIncomeTransaction);
-
-    setIncome({
-      incomeName: "",
-      incomeAmount: 0,
-    });
+      setIncome({
+        incomeName: "",
+        incomeAmount: 0,
+      });
+    }
   };
 
   const [expense, setExpense] = useState({
@@ -52,20 +52,20 @@ const AddTransactions = () => {
   const onSubmitExpense = (e) => {
     e.preventDefault();
 
-    const newExpenseTransaction = {
-      id: uuidv4(),
-      expenseName,
-      expenseAmount: expenseAmount * 1,
-    };
+    if (expenseName !== "") {
+      const newExpenseTransaction = {
+        id: uuidv4(),
+        expenseName,
+        expenseAmount: expenseAmount * 1,
+      };
 
-    console.log(newExpenseTransaction);
+      addExpense(newExpenseTransaction);
 
-    addExpense(newExpenseTransaction);
-
-    setExpense({
-      ExpenseName: "",
-      ExpenseAmount: 0,
-    });
+      setExpense({
+        ExpenseName: "",
+        ExpenseAmount: 0,
+      });
+    }
   };
 
   return (
@@ -83,7 +83,6 @@ const AddTransactions = () => {
                 autoComplete="off"
                 onChange={onChangeIncome}
               />
-
               <input
                 type="number"
                 name="incomeAmount"
@@ -93,8 +92,11 @@ const AddTransactions = () => {
                 autoComplete="off"
                 onChange={onChangeIncome}
               />
-
-              <button type="submit" className="btn btn-danger m-0">
+              <button
+                type="submit"
+                className="btn m-0 text-light"
+                id="buttonAdd"
+              >
                 Add new income
               </button>
             </div>
@@ -121,7 +123,11 @@ const AddTransactions = () => {
                 autoComplete="off"
                 onChange={onChangeExpense}
               />
-              <button type="submit" className="btn btn-danger m-0">
+              <button
+                type="submit"
+                className="btn m-0 text-light"
+                id="buttonAdd"
+              >
                 Add new expense
               </button>
             </div>
