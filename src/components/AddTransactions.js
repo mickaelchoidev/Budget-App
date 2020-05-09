@@ -15,7 +15,6 @@ const AddTransactions = () => {
 
   const onChangeIncome = (e) => {
     setIncome({ ...income, [e.target.name]: e.target.value });
-    console.log(income);
   };
 
   const onSubmitIncome = (e) => {
@@ -46,13 +45,12 @@ const AddTransactions = () => {
 
   const onChangeExpense = (e) => {
     setExpense({ ...expense, [e.target.name]: e.target.value });
-    console.log(expense);
   };
 
   const onSubmitExpense = (e) => {
     e.preventDefault();
 
-    if (expenseName !== "") {
+    if (expenseName) {
       const newExpenseTransaction = {
         id: uuidv4(),
         expenseName,
@@ -62,8 +60,8 @@ const AddTransactions = () => {
       addExpense(newExpenseTransaction);
 
       setExpense({
-        ExpenseName: "",
-        ExpenseAmount: 0,
+        expenseName: "",
+        expenseAmount: 0,
       });
     }
   };
@@ -102,7 +100,7 @@ const AddTransactions = () => {
             </div>
           </form>
         </div>
-        <div className="col text-center pr-0 pr-sm-2 pl-1 m-0 ">
+        <div className="col text-center pl-0 pl-sm-2 pr-1 m-0">
           <form onSubmit={onSubmitExpense}>
             <div className="form-group p-0 m-0">
               <input
