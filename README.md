@@ -15,6 +15,6 @@ This is a React project where you can add incomes or expenses, have the list of 
 
 #### => Clone the project in a chosen folder
 
-#### => Go to the folder and run `npm install` to install dependencies
+#### => Go to the project folder and run `npm install` to install dependencies
 
 #### => Then run `npm start` to open the app on your browser
